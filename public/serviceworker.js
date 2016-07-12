@@ -1,4 +1,4 @@
-var VERSION = 'v1';
+var VERSION = 'v2';
 var STATIC_CONTENT = [
     './',
     './index.html',
