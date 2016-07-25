@@ -4,12 +4,13 @@ var STATIC_CONTENT = [
     './index.html',
     './styles.css',
     './serviceworker.js',
-    './channelswitcher.js'
-
+    './channelswitcher.js',
+    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+    'https://fonts.googleapis.com/css?family=Russo+One'
 ];
 
 
-if(navigator.serviceWorker) {
+if(!navigator.serviceWorker) {
     navigator.serviceWorker.register('./serviceworker.js', {scope: './'})
         .then(function(serviceWorkerRegistration){
             console.log("Registration phase suceeded", serviceWorkerRegistration)
