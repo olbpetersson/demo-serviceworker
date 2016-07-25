@@ -10,7 +10,7 @@ var STATIC_CONTENT = [
 ];
 
 
-if(!navigator.serviceWorker) {
+if(navigator.serviceWorker) {
     navigator.serviceWorker.register('./serviceworker.js', {scope: './'})
         .then(function(serviceWorkerRegistration){
             console.log("Registration phase suceeded", serviceWorkerRegistration)
